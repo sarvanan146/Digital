@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Juice Shop</title>
+   <link rel="stylesheet" type="text/css" href="juice.css">
+</head>
+<body bgcolor="green">
+   <center><h1>saravanan Juice store</h1></center>
+   <div class="container">
+      <div class="juice-types">
+         <div class="juice-card">
+            <center><h2>mango juice</h2></center>
+            <center><img src="mango.jpg" width=80 height=80></center>
+            <center><button onclick="displayJuiceDetails('Orange juice')">Add to Cart</button></center>
+         </div>
+         <div class="juice-card">
+           <center><h2>orange juice</h2></center>
+            <center><img src="orange.jpg" width=80 height=80></center>
+            <center><button onclick="displayJuiceDetails('Mango juice')">Add to Cart</button></center>
+         </div>
+         <div class="juice-card">
+            <center><h2>Watermelon Juice</h2></center>
+            <center><img src="watermelon.jpg" width=80 height=80></center>
+            <center><button onclick="displayJuiceDetails('Watermelon Juice')">Add to Cart</button></center>
+         </div>
+      </div>
+   </div>
+   
+   <div id="juiceDetailsContainer" class="juice-details-container" style="display: none;">
+      <h3 id="juiceType"></h3>
+      <p>Rate with Ice: ₹80</p>
+      <p>Rate without Ice: ₹75</p>
+      <button onclick="displayPurchase()">Purchase</button>
+   </div>
+   
+   <div id="purchaseContainer" class="purchase-container" style="display: none;">
+      <h3>Purchase</h3>
+      <p>Customer Name: <input type="text" id="customerName"></p>
+      <p>Type of Juice: <span id="juiceTypePurchase"></span></p>
+      <p>With Ice: <input type="checkbox" id="withIce"></p>
+      <button onclick="displayPayment()">Make Payment</button>
+   </div>
+
+   <div id="paymentContainer" class="payment-container" style="display: none;">
+      <h3>Payment</h3>
+      <p>Juice Type: <span id="juiceTypePayment"></span></p>
+      <p>Customer: <span id="customerDetails"></span></p>
+      <p>Price: <span id="price"></span></p>
+      <h4>Enter Card Details:</h4>
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="CVV">
+      <button onclick="returnHome()">Pay</button>
+   </div>
+
+   <div id="homeContainer" class="home-container" style="display: none;">
+      <p><h2>Thank you for your purchase! Enjoy your juice!<h2></p> 
+   </div>
+
+   <script src="juice.js"></script>
+</body>
+
+</html>
